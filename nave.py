@@ -30,11 +30,20 @@ def resTrip():##Add tripulantes
     tripulantes.append(novoTripulante) ## inserimos
     print("Tripulante inserido com sucesso! 🚀")
 
+
+def remtrip():##Remover tripulantes
+    if (len(tripulantes)==0):
+        print("Não ha tripulantes. Adicione")
+    else:
+        tripulantes.pop()
+        print("Tripulante removido.")
+        print(tripulantes)
+
 ##Menu 
 
 print("\nBem vindo ao menu interativo da nave. Por favor selecione uma opção:")
 while True : #Roda para sempre
-    print("\n1- Mostrar status da nave| 2- Viajar| 3- Abastecer| 4- Novo Tripulante |5-Sair")
+    print("\n1- Mostrar status da nave| 2- Viajar| 3- Abastecer| 4- Novo Tripulante |5-Remover tripulante |6-Sair")
     opcao=input("Escolha: ")
     if (opcao=="1"):
         stNave()
@@ -45,5 +54,7 @@ while True : #Roda para sempre
     elif (opcao=="4"):
         resTrip()
     elif (opcao=="5"):
+        remtrip()
+    elif(opcao=="6"):
         print("Viagem encerrada!")
         break
