@@ -14,23 +14,29 @@ def viajar(): ##Gastar combustivel
         else:
             print("Voce está sem combustivel suficiente. Abasteça!")
 
+    travarmenu()
+
+
 def abastecer():
     print("-----------------------------------")
     global combustivel
     combustivel=100
     print("Tanque cheio! ⛽")
+    travarmenu()
 
 def stNave():
     print("----------STATUS DA NAVE-----------")
     print(f"A nave esta com {combustivel}L de combustivel")
     print(f"Os tripulantes são:{tripulantes}")
     print("-----------------------------------")
+    travarmenu()
 
 
 def resTrip():##Add tripulantes
     novoTripulante = input("Qual nome do novo tripulante? ")
     tripulantes.append(novoTripulante) ## inserimos
     print("Tripulante inserido com sucesso! 🚀")
+    travarmenu()
 
 
 def remtrip():##Remover tripulantes
@@ -40,6 +46,12 @@ def remtrip():##Remover tripulantes
         tripulantes.pop()
         print("Tripulante removido.")
         print(tripulantes)
+        travarmenu()
+
+## Pausar o código entre as interações do usuário
+def travarmenu():
+    #Nosso código vai aqui
+    input("\nPrecione <ENTER> para continuar......")
 
 ##Menu 
 
