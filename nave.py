@@ -3,14 +3,16 @@ combustivel=100
 tripulantes=[]
 ##Definir funções
 def viajar(): ##Gastar combustivel
-    
     global combustivel
-    if (combustivel>=30):
-        combustivel= combustivel- 30
-        print("A nave viajou com sucesso 🚀🚀")
+    if (len(tripulantes)==0):
+        print("Não ha tripulantes. Adicione")
+    
     else:
-        print("Voce está sem combustivel suficiente. Abasteça!")
-
+        if (combustivel>=30):
+            combustivel= combustivel- 30
+            print("A nave viajou com sucesso 🚀🚀")
+        else:
+            print("Voce está sem combustivel suficiente. Abasteça!")
 
 def abastecer():
     print("-----------------------------------")
